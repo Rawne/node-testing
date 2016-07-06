@@ -74,7 +74,7 @@ describe('CartSummary', function() {
 			});
 		});
 	
-		it('should also take into account tobacco tax of 21%', function() {
+		it('should also take into account tobacco tax of 21%', function(done) {
 			cartSummary = new CartSummary([
 				{
 					id: 1,
