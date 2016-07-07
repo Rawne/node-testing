@@ -21,4 +21,15 @@ CartSummary.prototype.getTax = function(state, done) {
 	});
 };
 
+CartSummary.prototype.getGrandtotal = function(state, done) {
+	if (this._items.length) {
+		var subtotal = this.getSubtotal();
+		this.getTax(state, function(taxAmount) {
+			done(subtotal + taxAmount)
+		});
+	} else {
+		done(0)	
+	}
+};
+
 module.exports = CartSummary;

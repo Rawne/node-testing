@@ -26,6 +26,12 @@ module.exports = {
     });
   },
   exciseTax: function(subtotal, type){
-    return 0;
+    if (type === "booze") {
+      return subtotal * 0.15
+    } else if (type === "tobacco") {
+      return subtotal * 0.21
+    } else {
+      return 0;
+    }
   }
 };

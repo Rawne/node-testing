@@ -94,7 +94,7 @@ describe('CartSummary', function() {
 			],
 			'tobacco');
 			cartSummary.getGrandtotal('NY', function(totalAmount) {
-				expect(totalAmount).to.equal(363);
+				expect(totalAmount).to.equal(393);
 				done();
 			});
 		});
